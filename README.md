@@ -1,1 +1,2 @@
 # MODAS-CINTHYA
+MODAS CINTHYA es una página web diseñada para facilitar la adquisición de productos en línea de ropa ejecutiva. A través de una plataforma moderna, intuitiva y segura, los clientes pueden explorar el catálogo de productos, visualizar imágenes detalladas, consultar precios y realizar pedidos desde cualquier lugar. Esta herramienta digital permite a la empresa ampliar su alcance comercial y ofrecer una experiencia de compra cómoda y eficiente.
