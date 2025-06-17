@@ -66,3 +66,48 @@ button {
 button:hover {
   background-color: #555;
 }
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    align-items: stretch;
+  }
+
+  .container {
+    flex-direction: column-reverse; /* formulario arriba, mapa abajo */
+    padding: 15px;
+    margin: 0 10px;
+  }
+
+  .mapa,
+  .formulario {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .mapa {
+    min-width: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formulario h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+}
