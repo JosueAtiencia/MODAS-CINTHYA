@@ -1,113 +1,254 @@
-body {
+*{
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Share Tech', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+.container{
+  width: 100%;
+  height: 100vh;
   background-color: #e7e7e7;
+  position: relative;
+}
+.logo{
+  font-weight: 600;
+  font-size: 3.8rem;
+}
+nav{
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li a{
+  color: black;
+}
+ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 6px 20px;
+  font-weight: 500;
+  font-size: 1.7rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+ul li:hover{
+  background-color: #f64848;
+  border-radius: 25px;
+  text-decoration: none;
+}
+header{
+ position: absolute;
+ bottom: 30%;
+ padding: 0 50px;
+}
+header h1{
+  font-size: 7rem;
+}
+header h2{
+  font-size: 4rem;
+}
+header p{
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+header button{
+  padding: 0 5px;
+  width: 140px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  background-color: #9e0b0b;
+  border-radius: 25px;
+  transition: width 0.5s;
+}
+
+button h4 a{
+  color: white;
+  text-decoration: none;
+  
+}
+button img{
+  display: none;
+}
+button:hover img{
+  display: block;
+}
+header button:hover{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+}
+
+.container .fondo-emp-ejc{
+  position: absolute;
+  height: 85%;
+  width: 35%;
+  right: 7%;
+  bottom: 0;
+  z-index: 999;
+}
+.container .fondo-emp{
+  position: absolute;
+  height: 85%;
+  width: 35%;
+  right: 4%;
+  bottom: 0;
+}
+.icons{
+  position: absolute;
+  bottom: 8%;
+  padding: 0 50px;
+}
+.icons i{
+  font-size: 2.5rem;
+  padding: 0 10px;
+  cursor: pointer;
+  color: black;
+}
+.icons i:hover{
+  color: #a01211;
+  transition: all 0.3s ease 0s;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: black;
+  min-height: 100px;
+  padding: 10px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
 }
 
-.container {
-  display: flex;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-  padding: 60px;
+.text-name-emp{
+  color: #e7e7e7;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  font-size: 25px;
 }
 
-.mapa {
-  flex: 1;
-  min-width: 400px;
-  padding: 40px;
+.text-creator{
+  color: #e7e7e7;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 1px;
+  font-size: 15px;
 }
 
-.formulario {
-  flex: 1;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-.formulario h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-textarea {
-  resize: none;
-  height: 100px;
-  border-radius: 20px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
+.text {
+  color: #e7e7e7;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
-  body {
+  html {
+    font-size: 55%;
+  }
+
+  nav {
+    padding: 15px 20px;
     flex-direction: column;
-    height: auto;
-    padding: 10px;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
-  .container {
-    flex-direction: column-reverse; /* formulario arriba, mapa abajo */
-    padding: 15px;
-    margin: 0 10px;
+  .logo {
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
 
-  .mapa,
-  .formulario {
+  nav ul {
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  .mapa {
-    min-width: unset;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  .formulario h2 {
-    font-size: 20px;
+  ul li {
+    padding: 8px 12px;
+    font-size: 1.5rem;
+  }
+
+  header {
+    position: static;
+    padding: 20px;
     text-align: center;
   }
 
-  input,
-  textarea,
-  button {
-    font-size: 14px;
-    padding: 10px;
+  header h1 {
+    font-size: 5rem;
   }
 
-  textarea {
-    height: 80px;
+  header h2 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.4rem;
+  }
+
+  header button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .container .fondo-emp {
+    position: absolute;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 10% 10% auto auto;
+  }
+
+  .container .fondo-emp-ejc{
+    position: absolute;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 10% 10% auto auto;
+  }
+
+  .icons {
+    position: static;
+    text-align: center;
+  }
+
+  .icons i {
+    font-size: 2rem;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .text-name-emp {
+    font-size: 20px;
+  }
+
+  .text-creator {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 16px;
   }
 }
