@@ -90,18 +90,18 @@ header button:hover{
   width: 160px;
 }
 
-.container .emp{
+.container .fondo-emp-ejc{
   position: absolute;
-  height: 600px;
-  width: 550px;
+  height: 85%;
+  width: 35%;
   right: 7%;
   bottom: 0;
   z-index: 999;
 }
 .container .fondo-emp{
   position: absolute;
-  height: 550px;
-  width: 500px;
+  height: 85%;
+  width: 35%;
   right: 4%;
   bottom: 0;
 }
@@ -155,4 +155,100 @@ header button:hover{
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  ul li {
+    padding: 8px 12px;
+    font-size: 1.5rem;
+  }
+
+  header {
+    position: static;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 5rem;
+  }
+
+  header h2 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.4rem;
+  }
+
+  header button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .container .fondo-emp {
+    position: absolute;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 10% 10% auto auto;
+  }
+
+  .container .fondo-emp-ejc{
+    position: absolute;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 10% 10% auto auto;
+  }
+
+  .icons {
+    position: static;
+    text-align: center;
+  }
+
+  .icons i {
+    font-size: 2rem;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .text-name-emp {
+    font-size: 20px;
+  }
+
+  .text-creator {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
 }
