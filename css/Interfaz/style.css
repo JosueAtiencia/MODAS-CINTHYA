@@ -89,21 +89,22 @@ header button:hover{
   justify-content: space-between;
   width: 160px;
 }
+.container .fondo-emp {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: 10% 10% auto auto;
+  right: 20%;
+}
 
 .container .fondo-emp-ejc{
   position: absolute;
-  height: 85%;
-  width: 35%;
-  right: 7%;
-  bottom: 0;
-  z-index: 999;
-}
-.container .fondo-emp{
-  position: absolute;
-  height: 85%;
-  width: 35%;
-  right: 4%;
-  bottom: 0;
+  width: 45%;
+  height: 30%;
+  display: block;
+  margin: 10% 10% auto auto;
+  right: 20%;
 }
 .icons{
   position: absolute;
