@@ -210,21 +210,11 @@ header button:hover{
   }
 
   .container .fondo-emp {
-    position: absolute;
-    width: 100%;
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 10% 10% auto auto;
+    visibility: hidden;
   }
 
   .container .fondo-emp-ejc{
-    position: absolute;
-    width: 100%;
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 10% 10% auto auto;
+    visibility: hidden;
   }
 
   .icons {
