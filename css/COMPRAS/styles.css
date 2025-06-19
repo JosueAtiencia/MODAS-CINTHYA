@@ -628,64 +628,90 @@ main {
     font-size: 20px;
   }
 
-  .form-group {
-    flex-direction: column;
-    align-items: flex-start;
+  .modal1-content {
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
-  .form-group select {
-    width: 100%;
-  }
+  main {
+		flex-direction: column;
+		gap: 15px;
+		padding: 10px;
+		margin-bottom: 50%;
+	}
 
-  .container-add-cart {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+	.container-info-product {
+		width: 100%;
+	}
 
-  .container-social {
-    flex-direction: column;
-  }
+	.form-group {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
 
-  .container-buttons-social {
-    flex-direction: column;
-    gap: 10px;
-  }
+	.form-group label {
+		width: auto;
+		font-size: 14px;
+	}
 
-  .text-name-emp,
-  .text-creator,
-  .text {
-    font-size: 16px;
-  }
+	.form-group select {
+		width: 100%;
+		padding: 10px;
+		font-size: 14px;
+	}
 
-  .icon-cart {
-    width: 30px;
-    height: 30px;
-  }
-  .count-products {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    background-color: #000;
-    color: #fff;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
+	.container-add-cart {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.container-quantity {
+		width: 100%;
+	}
+
+	.input-quantity {
+		width: 100%;
+	}
+
+	.btn-whatsapp {
+		width: 100%;
+		font-size: 16px;
+		padding: 12px;
+	}
+
+	.container-description,
+	.container-additional-information,
+	.container-reviews {
+		padding: 5px 0;
+	}
+
+	.text-description,
+	.text-additional-information,
+	.text-reviews {
+		font-size: 14px;
+		line-height: 20px;
+		margin-top: 15px;
+	}
+
+	.container-buttons-social {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.container-buttons-social a {
+		font-size: 14px;
+	}
+
+  
+  
 }
 
 @media (max-width: 480px) {
   .container-cart-products,
   .modal1-content {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: #fff;
-    width: 20pc;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
   }
 
