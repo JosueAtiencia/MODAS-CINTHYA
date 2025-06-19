@@ -710,9 +710,10 @@ main {
 @media (max-width: 480px) {
   .container-cart-products,
   .modal1-content {
-    max-width: 600px;
+    width: 20pc;
     height: auto;
     border-radius: 10px;
+    right: revert-layer;
   }
 
   .item img {
