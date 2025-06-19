@@ -10,10 +10,15 @@
         return;
       }
 
+      if (cantidad < 1) {
+        alert("Por favor, ingresa una cantidad igual o mayor que 1.");
+        return;
+      }
+
       const numeroTelefono = "593983158344"; 
       const mensaje = `¡Hola MODAS CINTHYA!, me encantan sus productos, quiero comprar:\n\n${precioTexto}\nTalla: ${talla}\nCantidad: ${cantidad}\n\nDe antemano solicito una factura, gracias.`;
 
-      const urlWhatsapp = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+      const urlWhatsapp = `https://web.whatsapp.com/send?phone=${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
 
       window.open(urlWhatsapp, "_blank");
     });
