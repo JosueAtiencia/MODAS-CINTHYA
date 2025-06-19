@@ -1,25 +1,32 @@
-  document.querySelectorAll(".btn-whatsapp").forEach((boton) => {
-    boton.addEventListener("click", function () {
-      const contenedor = boton.closest(".container-info-product");
-      const talla = contenedor.querySelector(".size").value;
-      const cantidad = contenedor.querySelector(".input-quantity").value;
-      const precioTexto = contenedor.querySelector(".container-price span").textContent;
+document.querySelectorAll(".btn-whatsapp").forEach((boton) => {
+  boton.addEventListener("click", function () {
+    const contenedor = boton.closest(".container-info-product");
+    const talla = contenedor.querySelector(".size").value;
+    const cantidad = Number(contenedor.querySelector(".input-quantity").value);
+    const precioTexto = contenedor.querySelector(".container-price span").textContent;
 
-      if (!talla) {
-        alert("Por favor, selecciona una talla.");
-        return;
-      }
+    if (!talla) {
+      alert("Por favor, selecciona una talla.");
+      return;
+    }
 
-      if (cantidad < 1) {
-        alert("Por favor, ingresa una cantidad igual o mayor que 1.");
-        return;
-      }
+    if (cantidad < 1) {
+      alert("Por favor, ingresa una cantidad igual o mayor que 1.");
+      return;
+    }
 
-      const numeroTelefono = "593983158344"; 
-      const mensaje = `¡Hola MODAS CINTHYA!, me encantan sus productos, quiero comprar:\n\n${precioTexto}\nTalla: ${talla}\nCantidad: ${cantidad}\n\nDe antemano solicito una factura, gracias.`;
+    const numeroTelefono = "593983158344"; 
+    const mensaje = `¡Hola MODAS CINTHYA!, me encantan sus productos, quiero comprar:\n\n${precioTexto}\nTalla: ${talla}\nCantidad: ${cantidad}\n\nDe antemano solicito una factura, gracias.`;
 
-      const urlWhatsapp = `https://web.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
+    const esMovil = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-      window.open(urlWhatsapp, "_blank");
-    });
+    let urlWhatsapp;
+    if (esMovil) {
+      urlWhatsapp = `whatsapp://send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
+    } else {
+      urlWhatsapp = `https://web.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
+    }
+
+    window.open(urlWhatsapp, "_blank");
   });
+});
